@@ -8,7 +8,34 @@ The primary goal of this project is to develop practical skills in Linux adminis
 
 The entire environment is built using open-source technologies and documented as a long-term learning and portfolio project.
 
----
+## Architecture
+
+```mermaid
+flowchart TD
+    Internet((Internet))
+    Cloudflare[Cloudflare DNS]
+    NPM[Nginx Proxy Manager]
+    Host[Hetzner Dedicated Server<br/>Debian 12 + Docker]
+
+    Internet --> Cloudflare
+    Cloudflare --> NPM
+    NPM --> Host
+
+    Host --> Grafana[Grafana]
+    Host --> Prometheus[Prometheus]
+    Host --> NodeExporter[Node Exporter]
+    Host --> CAdvisor[cAdvisor]
+    Host --> Kuma[Uptime Kuma]
+    Host --> N8N[n8n]
+    Host --> WikiJS[WikiJS]
+    Host --> BookStack[BookStack]
+    Host --> Portainer[Portainer]
+
+    Prometheus --> Grafana
+    NodeExporter --> Prometheus
+    CAdvisor --> Prometheus
+    Kuma --> N8N
+```---
 
 ## Infrastructure
 
