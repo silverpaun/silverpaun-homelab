@@ -1,4 +1,4 @@
-# SilverPaun Homelab
+# Silverpaun Homelab
 
 ## Overview
 
@@ -37,6 +37,18 @@ NodeExporter --> Prometheus
 CAdvisor --> Prometheus
 Kuma --> N8N
 ```
+## Current Services
+
+| Service | Purpose |
+|----------|----------|
+| Grafana | Monitoring dashboards |
+| Prometheus | Metrics collection |
+| Uptime Kuma | Availability monitoring |
+| n8n | Automation workflows |
+| WikiJS | Knowledge base |
+| BookStack | Documentation |
+| Portainer | Container management |
+| Nginx Proxy Manager | Reverse proxy |
 
 ## Infrastructure
 
@@ -70,28 +82,6 @@ Kuma --> N8N
 
 * WikiJS
 * BookStack
-
----
-
-## Architecture
-
-Internet
-│
-Cloudflare
-│
-Nginx Proxy Manager
-│
-Docker Host
-│
-├── Grafana
-├── Prometheus
-├── Node Exporter
-├── cAdvisor
-├── Uptime Kuma
-├── n8n
-├── WikiJS
-├── BookStack
-└── Portainer
 
 ---
 
