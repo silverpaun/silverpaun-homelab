@@ -1,23 +1,137 @@
 # SilverPaun Homelab
 
-Self-hosted infrastructure lab on Hetzner dedicated server.
+## Overview
 
-## Current Stack
+SilverPaun Homelab is a production-inspired self-hosted infrastructure project running on a dedicated Hetzner server.
 
-- Debian Server
-- Docker Compose
-- Nginx Proxy Manager
-- Grafana
-- Prometheus
-- Node Exporter
-- cAdvisor
-- Uptime Kuma
-- n8n
-- WikiJS
-- BookStack
-- Portainer
+The primary goal of this project is to develop practical skills in Linux administration, monitoring, automation, observability, security operations and AI-assisted infrastructure management.
 
-## Domains
+The entire environment is built using open-source technologies and documented as a long-term learning and portfolio project.
 
-- silverpaun.dev
-- silverpaun.tech
+---
+
+## Infrastructure
+
+### Hosting
+
+* Hetzner Dedicated Server
+* Debian 12
+
+### Container Platform
+
+* Docker Compose
+* Portainer
+
+### Reverse Proxy
+
+* Nginx Proxy Manager
+
+### Monitoring
+
+* Grafana
+* Prometheus
+* Node Exporter
+* cAdvisor
+* Uptime Kuma
+
+### Automation
+
+* n8n
+
+### Documentation
+
+* WikiJS
+* BookStack
+
+---
+
+## Architecture
+
+Internet
+│
+Cloudflare
+│
+Nginx Proxy Manager
+│
+Docker Host
+│
+├── Grafana
+├── Prometheus
+├── Node Exporter
+├── cAdvisor
+├── Uptime Kuma
+├── n8n
+├── WikiJS
+├── BookStack
+└── Portainer
+
+---
+
+## Public Services
+
+* grafana.silverpaun.dev
+* kuma.silverpaun.dev
+* wiki.silverpaun.dev
+* docs.silverpaun.dev
+
+---
+
+## Project Roadmap
+
+### Phase 1 - Foundation
+
+* Dedicated Infrastructure
+* Reverse Proxy
+* Monitoring Stack
+* Documentation Stack
+
+### Phase 2 - Automation
+
+* Uptime Kuma Webhooks
+* n8n Workflows
+* Telegram Notifications
+* Email Notifications
+
+### Phase 3 - Observability
+
+* Loki
+* Promtail
+* Centralized Logging
+
+### Phase 4 - Security
+
+* UFW
+* Fail2Ban
+* Security Monitoring
+* Hardening Improvements
+
+### Phase 5 - AI Operations
+
+* OpenWebUI
+* Ollama
+* Local LLM Models
+* AI-Assisted Infrastructure Analysis
+
+---
+
+## Repository Structure
+
+```text
+diagrams/
+docs/
+scripts/
+stacks/
+├── automation/
+├── documentation/
+├── monitoring/
+└── reverse-proxy/
+```
+
+---
+
+## Status
+
+Current Status: Active Development
+
+Last Updated: June 2026
+
