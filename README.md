@@ -12,30 +12,31 @@ The entire environment is built using open-source technologies and documented as
 
 ```mermaid
 flowchart TD
-    Internet((Internet))
-    Cloudflare[Cloudflare DNS]
-    NPM[Nginx Proxy Manager]
-    Host[Hetzner Dedicated Server<br/>Debian 12 + Docker]
 
-    Internet --> Cloudflare
-    Cloudflare --> NPM
-    NPM --> Host
+Internet((Internet))
+Cloudflare[Cloudflare DNS]
+NPM[Nginx Proxy Manager]
+Host[Hetzner Dedicated Server]
 
-    Host --> Grafana[Grafana]
-    Host --> Prometheus[Prometheus]
-    Host --> NodeExporter[Node Exporter]
-    Host --> CAdvisor[cAdvisor]
-    Host --> Kuma[Uptime Kuma]
-    Host --> N8N[n8n]
-    Host --> WikiJS[WikiJS]
-    Host --> BookStack[BookStack]
-    Host --> Portainer[Portainer]
+Internet --> Cloudflare
+Cloudflare --> NPM
+NPM --> Host
 
-    Prometheus --> Grafana
-    NodeExporter --> Prometheus
-    CAdvisor --> Prometheus
-    Kuma --> N8N
-```---
+Host --> Grafana
+Host --> Prometheus
+Host --> NodeExporter
+Host --> CAdvisor
+Host --> Kuma
+Host --> N8N
+Host --> WikiJS
+Host --> BookStack
+Host --> Portainer
+
+Prometheus --> Grafana
+NodeExporter --> Prometheus
+CAdvisor --> Prometheus
+Kuma --> N8N
+```
 
 ## Infrastructure
 
