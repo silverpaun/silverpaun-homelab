@@ -1,0 +1,4 @@
+
+# Local backups and raw Docker inspection output
+*.bak
+stacks/_current-state/docker-inspect-core.json
