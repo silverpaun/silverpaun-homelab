@@ -1,0 +1,13 @@
+NAMES                 IMAGE                                  PORTS                                                                                      STATUS
+cadvisor              gcr.io/cadvisor/cadvisor:latest        0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp                                                Up 23 hours (healthy)
+nginx-proxy-manager   jc21/nginx-proxy-manager:latest        0.0.0.0:80-81->80-81/tcp, [::]:80-81->80-81/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp   Up 23 hours
+node-exporter         prom/node-exporter:latest              0.0.0.0:9100->9100/tcp, [::]:9100->9100/tcp                                                Up 23 hours
+prometheus            prom/prometheus:latest                 0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp                                                Up 23 hours
+grafana               grafana/grafana-oss:latest             0.0.0.0:3002->3000/tcp, [::]:3002->3000/tcp                                                Up 23 hours
+uptime-kuma           louislam/uptime-kuma:1                 0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp                                                Up 23 hours (healthy)
+n8n                   docker.n8n.io/n8nio/n8n:latest         0.0.0.0:5678->5678/tcp, [::]:5678->5678/tcp                                                Up 23 hours
+bookstack             lscr.io/linuxserver/bookstack:latest   443/tcp, 0.0.0.0:6875->80/tcp, [::]:6875->80/tcp                                           Up 23 hours
+bookstack-db          mariadb:11                             3306/tcp                                                                                   Up 23 hours
+wikijs                ghcr.io/requarks/wiki:2                0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp, 3443/tcp                                      Up 23 hours
+wikijs-db             postgres:16-alpine                     5432/tcp                                                                                   Up 23 hours
+portainer             portainer/portainer-ce:lts             8000/tcp, 9000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp                            Up 23 hours

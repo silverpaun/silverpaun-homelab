@@ -1,0 +1,12 @@
+groups:
+  - name: blackbox-alerts
+    rules:
+      - alert: ServiceDown
+        expr: probe_success == 0
+        for: 1m
+        labels:
+          severity: critical
+          source: blackbox
+        annotations:
+          summary: "Service is down: {{ $labels.instance }}"
+          description: "Blackbox probe failed for {{ $labels.instance }} for more than 1 minute."
